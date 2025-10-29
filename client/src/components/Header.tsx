@@ -7,33 +7,29 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="mx-auto flex h-16 md:h-20 max-w-7xl items-center justify-between px-6 md:px-12">
-        <Link href="/">
-          <a className="text-xl md:text-2xl font-bold tracking-tight hover-elevate active-elevate-2 rounded-md px-2 py-1 -ml-2">
-            Free Hill Capital
-          </a>
+        <Link href="/" className="text-xl md:text-2xl font-bold tracking-tight hover-elevate active-elevate-2 rounded-md px-2 py-1 -ml-2">
+          Free Hill Capital
         </Link>
         
         <div className="flex items-center gap-6 md:gap-8">
           <nav className="hidden sm:flex items-center gap-6" data-testid="main-navigation">
-            <Link href="/">
-              <a 
-                className={`text-sm font-medium hover-elevate active-elevate-2 rounded-md px-3 py-2 transition-colors ${
-                  location === '/' ? 'text-foreground' : 'text-muted-foreground'
-                }`}
-                data-testid="link-home"
-              >
-                Home
-              </a>
+            <Link 
+              href="/"
+              className={`text-sm font-medium hover-elevate active-elevate-2 rounded-md px-3 py-2 transition-colors ${
+                location === '/' ? 'text-foreground' : 'text-muted-foreground'
+              }`}
+              data-testid="link-home"
+            >
+              Home
             </Link>
-            <Link href="/about">
-              <a 
-                className={`text-sm font-medium hover-elevate active-elevate-2 rounded-md px-3 py-2 transition-colors ${
-                  location === '/about' ? 'text-foreground' : 'text-muted-foreground'
-                }`}
-                data-testid="link-about"
-              >
-                About Us
-              </a>
+            <Link 
+              href="/about"
+              className={`text-sm font-medium hover-elevate active-elevate-2 rounded-md px-3 py-2 transition-colors ${
+                location === '/about' ? 'text-foreground' : 'text-muted-foreground'
+              }`}
+              data-testid="link-about"
+            >
+              About Us
             </Link>
           </nav>
           
