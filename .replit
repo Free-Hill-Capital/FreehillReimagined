@@ -15,13 +15,11 @@ localPort = 5000
 externalPort = 80
 
 [[ports]]
-localPort = 42279
+localPort = 34983
 externalPort = 3000
 
 [env]
-PORT=7000
-SENDGRID_API_KEY = ""
-TEST_MODE=true
+PORT = "5000"
 
 [workflows]
 runButton = "Project"
