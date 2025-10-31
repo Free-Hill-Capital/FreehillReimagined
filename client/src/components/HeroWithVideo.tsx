@@ -24,7 +24,7 @@ export default function HeroWithVideo({
   const y = useTransform(scrollYProgress, [0, 1], [0, 300]);
 
   return (
-    <section ref={ref} className="relative h-[70vh] min-h-[930px] overflow-hidden">
+    <section ref={ref} className="relative h-[60vh] min-h-[600px] md:h-[70vh] md:min-h-[930px] overflow-hidden">
       <motion.div className="absolute inset-0 z-0" style={{ y }}>
         <video
           autoPlay
@@ -39,35 +39,35 @@ export default function HeroWithVideo({
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/50 pointer-events-none" />
       </motion.div>
       
-      <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col items-center justify-center pt-[220px] px-6 md:px-12">
+      <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col items-center justify-center pt-[80px] md:pt-[220px] px-6 md:px-12">
         <motion.div 
-          className="text-center space-y-6 max-w-4xl"
+          className="text-center space-y-4 md:space-y-6 max-w-4xl"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 2.5, delay: 0.5, ease: "easeOut" }}
         >
           <h1 
-            className="font-bold tracking-tight text-white md:text-6xl lg:text-5xl"
+            className="text-3xl sm:text-4xl font-bold tracking-tight text-white md:text-6xl lg:text-5xl"
             data-testid="text-hero-title"
           >
             {slogan}
           </h1>
           <p 
-            className="mx-auto max-w-2xl text-md text-white/90 md:text-xl"
-            style={{ lineHeight: '2' }}
+            className="mx-auto max-w-2xl text-sm sm:text-base text-white/90 md:text-xl px-4"
+            style={{ lineHeight: '1.8' }}
             data-testid="text-hero-subtitle"
           >
             {description}
           </p>
           
-          <div className="pt-4">
+          <div className="pt-2 md:pt-4">
             <Link href="/about">
               <Button 
                 size="lg" 
-                className="group h-12 px-8 text-base font-semibold bg-white text-black hover:bg-white/90 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                className="group h-10 sm:h-12 px-6 sm:px-8 text-sm sm:text-base font-semibold bg-white text-black hover:bg-white/90 transition-all duration-300 hover:scale-105 hover:shadow-xl"
               >
                 Learn More
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
           </div>

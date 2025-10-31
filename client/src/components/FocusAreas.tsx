@@ -31,13 +31,13 @@ export default function FocusAreas() {
   const isInView = useInView(headerRef, { once: true, amount: 0.5 });
 
   return (
-    <section className="py-20 md:py-32 bg-muted/30">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-32 bg-muted/30">
       <div className="mx-auto max-w-7xl px-6 md:px-12">
-        <div ref={headerRef} className="mb-16 space-y-4 text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight" data-testid="text-focus-heading">
+        <div ref={headerRef} className="mb-12 md:mb-16 space-y-4 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight" data-testid="text-focus-heading">
             Focus Areas
           </h2>
-          <p className="mx-auto max-w-3xl text-lg md:text-xl text-muted-foreground" data-testid="text-focus-description">
+          <p className="mx-auto max-w-3xl text-base sm:text-lg md:text-xl text-muted-foreground" data-testid="text-focus-description">
             We invest across diverse industries, bringing operational expertise and strategic capital to each sector.
           </p>
         </div>

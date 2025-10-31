@@ -225,7 +225,7 @@ export default function Contact() {
   return (
     <>
       <Header />
-      <div className="relative min-h-screen bg-background pt-16 md:pt-20">
+      <div className="relative bg-background pt-0 md:pt-20">
         <div className="mx-auto max-w-[1200px] px-6 py-12 md:px-12 md:pt-[135px] md:py-20">
           <div className="mb-12 text-center">
             <h1 className="text-4xl font-bold tracking-tight md:text-5xl">

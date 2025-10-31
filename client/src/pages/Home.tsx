@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="relative min-h-screen bg-background">
       <Header />
-      <main className="relative pt-16 md:pt-20">
+      <main className="relative pt-0 md:pt-[65px]">
         <HeroWithVideo 
           title="Free Hill Capital"
           subtitle="Building Lasting Enterprises"

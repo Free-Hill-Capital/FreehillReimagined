@@ -3,7 +3,7 @@ import { MapPin, Mail, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="border-t bg-background md:pb-[40px] md:pt-[80px]">
+    <footer className="border-t bg-background pt-10 md:pb-[40px] md:pt-[80px]">
       <div className="mx-auto max-w-7xl px-6 md:px-12">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
           <div className="space-y-6 md:col-span-2 lg:col-span-1">
@@ -68,8 +68,8 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="mt-20 border-t pt-[40px] text-center text-base md:text-lg text-muted-foreground" data-testid="text-copyright">
-          <p>© {new Date().getFullYear()} Free Hill Capital. All rights reserved.</p>
+        <div className="md:mt-20 mt-12 border-t py-12 md:pt-[40px] md:py-0 text-center text-base md:text-lg text-muted-foreground" data-testid="text-copyright">
+          <p>© {new Date().getFullYear()} Free Hill Capital. <span className="block md:inline">All rights reserved.</span></p>
         </div>
       </div>
     </footer>

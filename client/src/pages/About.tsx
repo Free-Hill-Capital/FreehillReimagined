@@ -9,13 +9,13 @@ export default function About() {
     <div className="relative min-h-screen bg-background">
       <Header />
       <main className="relative pt-16 md:pt-20 md:pb-[80px]">
-        <section className="pt-[150px]">
+        <section className="pt-0 md:pt-[150px]">
           <div className="mx-auto max-w-6xl px-6 md:px-8 lg:px-12">
-            <div className="mb-16 space-y-4 text-center">
-              <h1 className="text-4xl font-bold tracking-tight md:text-5xl" data-testid="text-about-heading">
+            <div className="mb-12 md:mb-16 space-y-4 text-center">
+              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight md:text-5xl" data-testid="text-about-heading">
                 About Us
               </h1>
-              <p className="mx-auto max-w-3xl text-xl text-muted-foreground" data-testid="text-about-subtitle">
+              <p className="mx-auto max-w-3xl text-base sm:text-lg md:text-xl text-muted-foreground" data-testid="text-about-subtitle">
                 Learn more about our mission, values, and the story behind Free Hill Capital.
               </p>
             </div>
@@ -23,7 +23,7 @@ export default function About() {
         </section>
         
         <section className="py-0 md:py-16 bg-background">
-          <div className="mx-auto max-w-7xl px-6 md:px-12">
+          <div className="mx-auto max-w-7xl pb-10 md:pb-0 px-6 md:px-12">
             {/* Grid Layout: 2 rows x 2 columns */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
               

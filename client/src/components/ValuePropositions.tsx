@@ -26,7 +26,7 @@ export default function ValuePropositions() {
 
   return (
     <section className="py-20 md:py-32 bg-background">
-      <div className="mx-auto max-w-7xl px-6 md:px-12">
+      <div className="mx-auto max-w-7xl px-6 md:px-4">
         <div ref={headerRef} className="mb-16 space-y-4 text-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight" data-testid="text-values-heading">
             Our Approach
@@ -36,7 +36,7 @@ export default function ValuePropositions() {
           </p>
         </div>
         
-        <div className="grid gap-8 md:gap-12 md:grid-cols-3">
+        <div className="grid gap-3 md:gap-1 md:grid-cols-3">
           {values.map((value, index) => {
             return (
               <motion.div
