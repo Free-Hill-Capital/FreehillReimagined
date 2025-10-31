@@ -8,9 +8,9 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="relative min-h-screen bg-background">
       <Header />
-      <main>
+      <main className="relative pt-16 md:pt-20">
         <HeroWithVideo 
           title="Free Hill Capital"
           subtitle="Building Lasting Enterprises"

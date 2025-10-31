@@ -8,7 +8,7 @@ interface VideoHeroProps {
 }
 
 export default function VideoHero({ 
-  videoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ",
+  videoUrl = "/banner-video.mp4",
   title = "Our Story"
 }: VideoHeroProps) {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -29,14 +29,15 @@ export default function VideoHero({
       <div className="mx-auto max-w-6xl px-6 md:px-8 lg:px-12">
         <div className="space-y-8">
           <div className="aspect-video w-full overflow-hidden rounded-lg bg-muted">
-            <iframe
-              src={videoUrl}
-              title={title}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="h-full w-full"
+            <video
+              autoPlay
+              controls
+              playsInline
+              className="h-full w-full object-cover"
               data-testid="video-player"
-            />
+            >
+              <source src={videoUrl} type="video/mp4" />
+            </video>
           </div>
           
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
