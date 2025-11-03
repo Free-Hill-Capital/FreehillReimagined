@@ -25,7 +25,7 @@ export default function HeroWithVideo({
 
   return (
     <section ref={ref} className="relative h-[60vh] min-h-[600px] md:h-[70vh] md:min-h-[930px] overflow-hidden">
-      <motion.div className="absolute inset-0 z-0" style={{ y }}>
+      <motion.div className="absolute inset-0 left-[-50px] z-0" style={{ y }}>
         <video
           autoPlay
           loop
