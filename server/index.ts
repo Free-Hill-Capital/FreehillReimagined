@@ -3,6 +3,8 @@ import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 import dotenv from "dotenv";
 
+// Load environment variables from .env file (for local development)
+// On Replit, use Secrets instead
 dotenv.config();
 
 const app = express();
