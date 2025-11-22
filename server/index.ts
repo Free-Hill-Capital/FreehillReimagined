@@ -52,7 +52,76 @@ app.use((req, res, next) => {
 });
 
 (async () => {
+  // ===================================================================
+  // PERMANENT 301 REDIRECTS - OLD URLS TO NEW STRUCTURE
+  // These must be at the top before registerRoutes to prevent conflicts
+  // ===================================================================
+  
+  // Redirect old industries pages to homepage
+  app.get('/industries', (req, res) => {
+    res.redirect(301, '/');
+  });
+  
+  app.get('/industries-categories/real-estate', (req, res) => {
+    res.redirect(301, '/');
+  });
+  
+  app.get('/industries-categories/construction', (req, res) => {
+    res.redirect(301, '/');
+  });
+  
+  app.get('/industries-categories/financial-services', (req, res) => {
+    res.redirect(301, '/');
+  });
+  
+  app.get('/industries-categories/credit-facilities', (req, res) => {
+    res.redirect(301, '/');
+  });
+  
+  app.get('/industries-categories/retail', (req, res) => {
+    res.redirect(301, '/');
+  });
+  
+  app.get('/industries-categories/healthcare', (req, res) => {
+    res.redirect(301, '/');
+  });
+  
+  // Catch-all for any other industries-categories pages
+  app.get('/industries-categories/*', (req, res) => {
+    res.redirect(301, '/');
+  });
+  
+  // Redirect old insights/blog pages to homepage
+  app.get('/insights/the-importance-of-supplements-in-insurance-claims-for-contractors', (req, res) => {
+    res.redirect(301, '/');
+  });
+  
+  // Catch-all for any other insights pages
+  app.get('/insights/*', (req, res) => {
+    res.redirect(301, '/');
+  });
+  
+  // Redirect old application form to contact page
+  app.get('/application-form', (req, res) => {
+    res.redirect(301, '/contact');
+  });
+  
+  // Redirect old careers page to homepage
+  app.get('/careers', (req, res) => {
+    res.redirect(301, '/');
+  });
+  
+  // Redirect old API endpoint to homepage
+  app.get('/api/v1/access-tokens', (req, res) => {
+    res.redirect(301, '/');
+  });
+
   const server = await registerRoutes(app);
+
+  // Catch-all for undefined API routes - returns JSON 404 to prevent indexing
+  app.use('/api/*', (req, res) => {
+    return res.status(404).json({ error: 'Not Found' });
+  });
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
     const status = err.status || err.statusCode || 500;
@@ -60,15 +129,6 @@ app.use((req, res, next) => {
 
     res.status(status).json({ message });
     throw err;
-  });
-
-  // Permanent redirects for old URLs Google is trying to index
-  app.get('/insights/the-importance-of-supplements-in-insurance-claims-for-contractors', (req, res) => {
-    res.redirect(301, '/about');
-  });
-
-  app.get('/industries-categories/healthcare', (req, res) => {
-    res.redirect(301, '/about');
   });
 
   // importantly only setup vite in development and after
