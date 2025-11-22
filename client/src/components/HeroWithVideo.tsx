@@ -32,6 +32,10 @@ export default function HeroWithVideo({
           muted
           playsInline
           className="h-full w-full object-cover"
+          style={{ 
+            filter: 'contrast(1.05) saturate(1.1) brightness(1.02)',
+            imageRendering: 'crisp-edges'
+          }}
           data-testid="video-background"
         >
           <source src={videoUrl} type="video/mp4" />
