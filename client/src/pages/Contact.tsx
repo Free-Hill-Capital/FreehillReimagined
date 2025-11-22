@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -224,15 +225,19 @@ export default function Contact() {
 
   return (
     <>
+      <SEO
+        title="Contact | Modern Conglomerate Corporation | Free Hill Capital"
+        description="Contact Free Hill Capital, modern conglomerate corporation dedicated to operational excellence and growth. Speak with a committed business growth partner today!"
+      />
       <Header />
       <div className="relative bg-background pt-0 md:pt-20">
         <div className="mx-auto max-w-[1200px] px-6 py-12 md:px-12 md:pt-[135px] md:py-20">
           <div className="mb-12 text-center">
             <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
-              Contact Us
+              Get in Touch
             </h1>
             <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Get in touch with our team today — we're ready to help you grow.
+              Contact Free Hill Capital today. As a modern conglomerate corporation dedicated to operational excellence and growth, we're your committed business growth partner.
             </p>
           </div>
 
