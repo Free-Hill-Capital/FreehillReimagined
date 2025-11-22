@@ -62,6 +62,15 @@ app.use((req, res, next) => {
     throw err;
   });
 
+  // Permanent redirects for old URLs Google is trying to index
+  app.get('/insights/the-importance-of-supplements-in-insurance-claims-for-contractors', (req, res) => {
+    res.redirect(301, '/about');
+  });
+
+  app.get('/industries-categories/healthcare', (req, res) => {
+    res.redirect(301, '/about');
+  });
+
   // importantly only setup vite in development and after
   // setting up all the other routes so the catch-all route
   // doesn't interfere with the other routes

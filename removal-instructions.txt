@@ -1,0 +1,148 @@
+================================================================================
+GOOGLE SEARCH CONSOLE - URL REMOVAL INSTRUCTIONS
+Free Hill Capital Website
+Date: November 23, 2025
+================================================================================
+
+INVALID URLS TO REMOVE:
+1. /insights/the-importance-of-supplements-in-insurance-claims-for-contractors
+2. /industries-categories/healthcare
+
+Both URLs now redirect with 301 status to: /about
+
+================================================================================
+STEP-BY-STEP REMOVAL PROCESS:
+================================================================================
+
+STEP 1: Access Google Search Console
+------------------------------------
+1. Open browser and go to: https://search.google.com/search-console
+2. Sign in with your Google account
+3. Select property: freehillcapital.com (or www.freehillcapital.com)
+
+STEP 2: Navigate to Removals Section
+------------------------------------
+1. Look at the left sidebar menu
+2. Click on "Removals" (under "Indexing" section)
+3. You'll see the URL Removal requests page
+
+STEP 3: Request Removal for First URL
+------------------------------------
+1. Click the blue "New Request" button (top right)
+2. Select "Temporarily remove URL"
+3. Enter the full URL:
+   https://www.freehillcapital.com/insights/the-importance-of-supplements-in-insurance-claims-for-contractors
+4. Select option: "Remove this URL only"
+5. Click "Next"
+6. Review the URL to be removed
+7. Click "Submit"
+8. Wait for confirmation message
+
+STEP 4: Request Removal for Second URL
+------------------------------------
+1. Click "New Request" button again
+2. Select "Temporarily remove URL"
+3. Enter the full URL:
+   https://www.freehillcapital.com/industries-categories/healthcare
+4. Select option: "Remove this URL only"
+5. Click "Next"
+6. Review the URL to be removed
+7. Click "Submit"
+8. Wait for confirmation message
+
+STEP 5: Monitor Removal Status
+------------------------------------
+1. Stay on the "Removals" page
+2. Check the status column for both URLs:
+   - "Pending" = Request is being processed (up to 24 hours)
+   - "Temporarily removed" = Successfully removed (lasts ~6 months)
+   - "Cancelled" or "Failed" = Need to resubmit
+3. Take screenshots of successful removals for records
+
+STEP 6: Verify 301 Redirects Are Working
+------------------------------------
+1. Open URL Inspection tool (top of Search Console)
+2. Enter first old URL and press Enter
+3. Check that it shows:
+   - Status: "URL is on Google" or "Redirect"
+   - Redirect target: /about
+   - Redirect type: 301 (Permanent)
+4. Repeat for second URL
+5. If redirects aren't showing, wait 24 hours for Google to recrawl
+
+STEP 7: Optional - Test URLs Manually
+------------------------------------
+1. Open new browser tab
+2. Paste first old URL: 
+   https://www.freehillcapital.com/insights/the-importance-of-supplements-in-insurance-claims-for-contractors
+3. Press Enter - should redirect to /about page
+4. Open browser DevTools (F12 or Cmd+Option+I)
+5. Go to Network tab
+6. Reload page
+7. Check first request shows "301" status code
+8. Repeat for second URL
+
+================================================================================
+IMPORTANT NOTES:
+================================================================================
+
+⏰ TIMELINE:
+- Removal requests are processed within 24-48 hours
+- Temporary removals last approximately 6 months
+- Permanent removal happens when Google recrawls and confirms 301 redirect
+
+⚠️  REMOVAL vs REDIRECT:
+- Removal request = Immediately hides URL from search results (temporary)
+- 301 redirect = Permanently tells Google content moved (long-term solution)
+- Both are needed: Removal for quick fix, redirect for permanent solution
+
+✅ WHAT HAPPENS AFTER REMOVAL:
+1. URL disappears from Google search results within 24-48 hours
+2. Google will recrawl and discover the 301 redirect
+3. After ~6 months, temporary removal expires but 301 keeps it away
+4. Page authority transfers from old URL to /about page
+5. Users clicking old links automatically go to /about page
+
+📊 MONITORING:
+- Check "Removals" section weekly for first month
+- Monitor "Coverage" report to see URLs marked as "Redirect"
+- Check Google Analytics for any 404 errors (should be zero for these URLs)
+- Review "Performance" report to ensure old URLs don't appear in search queries
+
+🔄 IF REMOVAL FAILS:
+1. Verify the exact URL format (with https:// and www if applicable)
+2. Check that 301 redirect is working on your live site
+3. Wait 24 hours and try again
+4. Contact Google Search Console support if issues persist
+
+================================================================================
+ADDITIONAL RESOURCES:
+================================================================================
+
+Google Search Console Help:
+https://support.google.com/webmasters/answer/9689846
+
+Understanding URL Removals:
+https://developers.google.com/search/docs/crawling-indexing/remove-information
+
+301 Redirects Guide:
+https://developers.google.com/search/docs/crawling-indexing/301-redirects
+
+================================================================================
+COMPLETION CHECKLIST:
+================================================================================
+
+[ ] Logged into Google Search Console
+[ ] Navigated to Removals section
+[ ] Submitted removal request for insights URL
+[ ] Submitted removal request for industries-categories URL
+[ ] Verified both requests show "Pending" status
+[ ] Tested 301 redirects manually in browser
+[ ] Verified redirects show in URL Inspection tool
+[ ] Documented removal request dates
+[ ] Set calendar reminder to check status in 48 hours
+[ ] Set calendar reminder to verify permanent removal in 7 days
+
+================================================================================
+END OF INSTRUCTIONS
+================================================================================
